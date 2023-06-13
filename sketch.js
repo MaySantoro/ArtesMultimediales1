@@ -1,102 +1,76 @@
-//Maylen Santoro-Trabajo Práctico Nro 1-A.M.-
-
-//variables
-var angulo = 0.0;
-var desplazamiento = 20;
-var escalar = 5;
-var velocidad = 2;
-
-
+//Maylen Santoro-ACTIVIDAD 2-A.M.-
+//Para interactuar mové el mouse
 
 function setup() {
-  createCanvas(512, 512);
-  background(128);
+  createCanvas(600, 600);
+  background(210, 200, 100);
   frameRate(30);
   
-  
-  //lineas left
-  line(15, 100, 200, 500);
-  line(25, 100, 200, 500);
-  line(35, 100, 200, 500);
-  line(45, 100, 200, 500);
-  line(55, 100, 200, 500);
-  line(65, 100, 200, 500);
-  line(75, 100, 200, 500);
-  line(85, 100, 200, 500);
-  line(95, 100, 200, 500)
-  line(105, 100, 200, 500);
-  line(115, 100, 200, 500);
-  line(125, 100, 200, 500);
-  line(135, 100, 200, 500);
-  
-  //lineas right
-  line(305, 400, 500, 112);
-  line(315, 400, 500, 112);
-  line(325, 400, 500, 112);
-  line(335, 400, 500, 112);
-  line(345, 400, 500, 112);
-  line(355, 400, 500, 112);
-  line(365, 400, 500, 112);
-  line(375, 400, 500, 112);
-  line(385, 400, 500, 112);
-  line(395, 400, 500, 112);
-  line(405, 400, 500, 112);
-  line(415, 400, 500, 112);
-  line(425, 400, 500, 112);
-  
-  //lineas middle
-  line(295, 47, 205, 311);
-  line(295, 47, 215, 311);
-  line(295, 47, 225, 311);
-  line(295, 47, 235, 311);
-  line(295, 47, 245, 311);
-  line(295, 47, 255, 311);
-  line(295, 47, 265, 311);
-  line(295, 47, 275, 311);
-  line(295, 47, 285, 311);
-  line(295, 47, 295, 311);
-  line(295, 47, 305, 311);
-  line(295, 47, 315, 311);
-  line(295, 47, 325, 311);
-  line(295, 47, 335, 311);
-  line(295, 47, 345, 311);
-  
- 
- 
+  line(5, 100, 200, 500);
+  line(10, 200, 400, 500);
+  line(30, 300, 500, 550);
+
+  ///
+  fill(0, 0, 10, 60);
+  noStroke();
+  triangle(98, 125, 130, 105, 630, 850);
+  triangle(291, 191, 320, 180, 450, 695);
+  ///
+  fill(0, 0, 10, 60);
+  noStroke();
+  triangle(98, 125, 130, 105, 630, 950);
+  ///
+  fill(200, 100, 30);
+  noStroke();
+  rect(500, 400, 10, 40);
+  rect(200, 200, 50, 50);
+  rect(300, 100, 30, 10);
+  ///
+  fill(20, 50, 30);
+  noStroke();
+  quad(80, 500, 140, 300, 10, 500, 60, 500);
+
+  ///
+  fill(20, 50, 30);
+  noStroke();
+  quad(200, 500, 200, 150, 500, 200, 100, 300);
+  ///
+  fill(200, 100, 30);
+  noStroke();
+  rect(800, 400, 10, 40);
+  rect(500, 200, 50, 50);
+  rect(200, 100, 30, 10);
+  ///
+  noStroke();
+  fill(300, 100, 50);
+  triangle(460, 120, 480, 140, 430, 180);
 }
+
 function draw() {
-  
   console.log("X: " + mouseX + " Y:" + mouseY);
-  console.log (frameCount);
+  //background(30, 50, 100);
+  //print("hola");
+  console.log(frameCount);
+  //console.log(frameRate());
+  //strokeWeight(frameCount);
+  //strokeWeight(frameRate());
+ 
+  //-------PINCEL
+  noStroke();
+  fill(10, 30, 0, 200);
+ circle(mouseX, mouseY, 15, 20);
+
+ stroke(0);
+  strokeWeight(1);
+  
+  //--------PMOUSE
+  stroke(15, 20, 0, 100);
+  strokeWeight(5);
+  line(mouseX, mouseY, pmouseX, pmouseY);
 
 
+  stroke(0);
+  strokeWeight(2);
 
-  
-  
-  
-  
- var x = desplazamiento + cos(angulo) * escalar;
-  var y = desplazamiento + sin(angulo) * escalar;
-  line(x, y, 295, 46);
-  angulo += velocidad;
-  escalar += velocidad;
-
-  var x = desplazamiento + cos(angulo) * escalar;
-  var y = desplazamiento + sin(angulo) * escalar;
-  line(x, y, 198, 498);
-  angulo += velocidad;
-  escalar += velocidad;
-  
-  var x = desplazamiento + cos(angulo) * escalar;
-  var y = desplazamiento + sin(angulo) * escalar;
-  line(x, y, 499, 110);
-  angulo += velocidad;
-  escalar += velocidad;
-  
   
 }
-
- 
-  
-
-  
